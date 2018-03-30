@@ -93,7 +93,7 @@ if [ -d "/etc/squid/" ]
 then
 	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid2.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid/squid.conf
 	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/payload.txt -O /etc/squid/payload.txt
 	echo " " >> /etc/squid/payload.txt
