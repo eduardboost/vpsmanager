@@ -46,35 +46,35 @@ if [ -f "/usr/sbin/ufw" ] ; then
 fi
 if [ -d "/etc/squid3/" ]
 then
-	wget https://raw.githubusercontent.com/ringhtprince/VpsManager/master/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget https://raw.githubusercontent.com/ringhtprince/VpsManager/master/squid2.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid2.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid3/squid.conf
-	wget https://raw.githubusercontent.com/ringhtprince/VpsManager/master/payload.txt -O /etc/squid3/payload.txt
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/payload.txt -O /etc/squid3/payload.txt
 	echo " " >> /etc/squid3/payload.txt
 	grep -v "^Port 443" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	wget http://seannsvps.esy.es/vpsmanager/scripts/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget http://seannsvps.esy.es/vpsmanager/scripts/crearusuario2.sh -O /bin/crearusuario
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/crearusuario2.sh -O /bin/crearusuario
 	chmod +x /bin/crearusuario
-	wget http://seannsvps.esy.es/vpsmanager/scripts/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget http://seannsvps.esy.es/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget http://seannsvps.esy.es/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget http://seannsvps.esy.es/vpsmanager/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget http://seannsvps.esy.es/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget http://seannsvps.esy.es/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget http://seannsvps.esy.es/vpsmanager/scripts/ayuda.sh -O /bin/ayuda
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/ayuda.sh -O /bin/ayuda
 	chmod +x /bin/ayuda
-	wget http://seannsvps.esy.es/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -91,35 +91,35 @@ then
 fi
 if [ -d "/etc/squid/" ]
 then
-	wget http://seannsvps.esy.es/vpsmanager/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget http://seannsvps.esy.es/vpsmanager/squid.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/squid.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid/squid.conf
-	wget http://seannsvps.esy.es/vpsmanager/payload.txt -O /etc/squid/payload.txt
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/payload.txt -O /etc/squid/payload.txt
 	echo " " >> /etc/squid/payload.txt
 	grep -v "^Port 443" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	wget http://seannsvps.esy.es/vpsmanager/scripts/2/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/2/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget http://seannsvps.esy.es/vpsmanager/scripts/crearusuario2.sh -O /bin/crearusuario
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/crearusuario2.sh -O /bin/crearusuario
 	chmod +x /bin/crearusuario
-	wget http://seannsvps.esy.es/vpsmanager/scripts/2/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/2/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget http://seannsvps.esy.es/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget http://seannsvps.esy.es/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget http://seannsvps.esy.es/vpsmanager/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget http://seannsvps.esy.es/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget http://seannsvps.esy.es/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget http://seannsvps.esy.es/vpsmanager/scripts/ayuda.sh -O /bin/ayuda
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/ayuda.sh -O /bin/ayuda
 	chmod +x /bin/ayuda
-	wget http://seannsvps.esy.es/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/eduardboost/vpsmanager/master/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
 	if [ ! -f "/etc/init.d/squid" ]
 	then
